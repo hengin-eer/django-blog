@@ -1,0 +1,26 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+
+{% block top-view %}
+
+<img src="/media/about.jpg" alt="">
+
+{% endblock %}
+
+
+{% block content %}
+<div class="selects">
+    <ul>
+        <li><a href="#">html</a></li>
+        <li><a href="#">css</a></li>
+        <li><a href="#">JavaScript</a></li>
+        <li><a href="#">Python</a></li>
+        <li><a href="#">React</a></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block side %}
+<div class="sidebar">{% include 'blog/side.html' %}</div>
+{% endblock %}

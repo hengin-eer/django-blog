@@ -1,0 +1,33 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+
+{% block top-view %}
+<img src="/media/blog.jpg" alt="">
+{% endblock %}
+
+{% block content %}
+
+{% if category %}
+<h3 class="c-title">{{ category }}</h3>
+{% endif %}
+
+{% for post in posts %}
+<article>
+    <div class="art-titleBox">
+        <p class="c-tag">{{post.category}}</p>
+        <div class="art-timeBox">
+            <p class="art-time">{{post.upgrade_date}}</p>
+            <p class="art-auth">{{post.auther}}</p>
+        </div>
+    </div>
+    <h2 class="art-title">{{post.title}}</h2>
+    <div class="art-intro">{{post.intro}}</div>
+    <a class="more-read" href="{% url 'post_detail' post.category post.slug %}">続きを見る</a>
+</article>
+{% endfor %}
+{% endblock %}
+
+{% block side %}
+<div class="sidebar">{% include 'blog/side.html' %}</div>
+{% endblock %}

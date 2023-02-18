@@ -1,0 +1,20 @@
+<nav class="sideBox">
+    <section>
+        <h3 class="side-c">Category</h3>
+        <div class="side-cBox">
+            {% for category in category_list %}
+            <a class="c-tag" href="{% url 'category' category %}">
+                <p>
+                    {{category.name}}
+                </p>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+    <section>
+        <h1>Sidebar</h1>
+    </section>
+    <section>
+        <h1>Sidebar</h1>
+    </section>
+</nav>

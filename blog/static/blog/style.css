@@ -1,0 +1,407 @@
+/* font import
+============== */
+/* for title */
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap');
+/* generally */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Serif JP';
+    color: #252A34;
+}
+
+:root {
+    --pri-red: #9b003f;
+    --pri-green: #14C38E;
+}
+
+a {
+    text-decoration: none;
+    color: #14C38E;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+p {
+    line-height: 2;
+    font-size: 1rem;
+}
+
+img {
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* settings */
+
+.home-header {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 0 2rem;
+    background: var(--pri-red);
+}
+
+.home-header h1 a {
+    color: white;
+    font-size: 2rem;
+    font-family: 'Yuji Syuku';
+}
+
+.header-nav {
+    display: flex;
+    gap: 1.5rem;
+    margin-left: auto;
+}
+
+.header-nav li a {
+    display: block;
+    padding: 12px;
+    background: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.header-nav li a i {
+    vertical-align: top;
+}
+
+body {
+    background: #EAEAEA;
+}
+
+main {
+    display: flex;
+}
+
+.container {
+    min-height: calc(100vh - 2rem - 70px);
+    width: calc(100vw - 2rem);
+    min-width: calc(65vw - 2rem);
+    padding: 2rem 1rem 0;
+    margin: 1rem;
+    background: white;
+}
+
+article {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #333;
+}
+
+.sidebar {
+    min-width: 35vw;
+    min-height: 100vh;
+}
+
+/* top-view */
+.top-view>img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    object-position: center;
+    vertical-align: bottom;
+}
+
+/* article area */
+.art-titleBox {
+    display: flex;
+    align-items: center;
+}
+
+.art-title {
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+.art-timeBox {
+    margin-left: auto;
+}
+
+.art-time::before {
+    font-family: 'Font Awesome 6 Free';
+    content: "\f2f1";
+    font-weight: 900;
+    padding-right: 5px;
+}
+
+.art-auth::before {
+    font-family: 'Font Awesome 6 Free';
+    content: "\f2bd";
+    font-weight: 900;
+    padding-right: 5px;
+}
+
+.art-intro {
+    color: #252A34;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 0 2rem;
+}
+
+.more-read {
+    display: block;
+    width: 100%;
+    background: #14C38E;
+    color: white;
+    text-align: center;
+    padding: .5rem 1rem;
+    margin: 1rem auto 0;
+    border-radius: 5rem;
+}
+
+article .toc {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background: #EAEAEA;
+}
+
+/* article about area */
+.art-aboutBack {
+    filter: opacity(.5) saturate(200%);
+}
+
+.art-aboutBox {
+    /* position: absolute; */
+    top: 70px;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.art-aboutItem {
+    height: 100%;
+    width: 100%;
+}
+
+/* article settings */
+article>p {
+    line-height: 2;
+    padding: .5rem;
+}
+
+
+/* sidebar area */
+.sideBox {
+    width: calc(100% - 2rem);
+    height: 100%;
+    margin: 1rem;
+}
+
+.sideBox>section {
+    padding: 1rem;
+    margin: 0 0 1.5rem;
+    background: white;
+}
+
+/* each */
+.side-c {
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+}
+
+.side-c::before {
+    font-family: 'Font Awesome 6 Free';
+    content: "\f02c";
+    font-weight: 900;
+    padding-right: 5px;
+}
+
+.side-cBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.c-tag {
+    width: max-content;
+    padding: 0 1rem;
+    border-radius: 1rem;
+    background: #14C38E;
+    color: white;
+    font-size: .8rem;
+}
+
+.side-cBox .c-tag {
+    margin: 0 10px 10px 0;
+}
+
+.c-tag p {
+    color: white;
+    font-size: .8rem;
+}
+
+/* category logos */
+.c-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    background: #9b003f;
+}
+
+footer p {
+    font-size: .9rem;
+    color: white;
+}
+
+
+/* forms-area */
+.forms {
+    margin: 1rem 0;
+}
+
+.forms>p {
+    margin: 1rem 0;
+}
+
+.forms input {
+    display: inline-block;
+    height: 2.4em;
+    width: 100%;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.forms input:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
+}
+
+.forms select {
+    height: 2.4em;
+    width: 100%;
+    padding: 0 8px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+.forms select:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
+}
+
+.forms textarea {
+    display: block;
+    height: 300px;
+    width: 100%;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0 0 0 1px #ccc inset;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    resize: vertical;
+}
+
+.forms textarea:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
+}
+
+.forms button {
+    display: inline-block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.forms button:hover {
+    background-color: #000;
+}
+
+.forms button:focus {
+    outline: 0;
+    background-color: #000;
+    border: 2px solid rgb(33, 150, 243);
+}
+
+
+/* login-area */
+.login {
+    height: 100vh;
+    width: 100vw;
+}
+
+.login-header {
+    height: 27.5vh;
+    /* background: #9b003f; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-logo {
+    font-size: 3rem;
+    color: white;
+    color: #9b003f;
+    font-family: 'Yuji Syuku';
+}
+
+.loginBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 350px;
+    height: fit-content;
+    max-width: 500px;
+    width: 90vw;
+    padding: 2rem 1rem 0;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 2px 2px 5px gray;
+}
+
+.loginTitle {
+    font-size: 5rem;
+    text-align: center;
+    color: #14C38E;
+}
+
+.loginErr {
+    padding: .5rem;
+    background: deeppink;
+    color: white;
+    border-radius: 5px;
+}

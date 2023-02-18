@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-doujou</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/responsive.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/gradient-dark.min.css" integrity="sha512-9BPoD3EiW9STszfvG0c4C9aKPKVeS/b2JD6LTSGJ0MRB6SEn2GDn2mEPdj8QZBDHOStOpKRyUzkC8q31cyqy7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="home-header">
+        <div class="header-logo">
+            <h1><a href="/">Web道場</a></h1>
+        </div>
+        <ul class="header-nav">
+            <li><a href="/blog"><i class="fa-solid fa-newspaper"></i></a></li>
+            <li><a href="/about/"><i class="fa-solid fa-circle-info"></i></a></li>
+            <li><a href="/contact/"><i class="fa-solid fa-envelope"></i></a></li>
+            <li><a href="{% url 'post_create' %}"><i class="fa-solid fa-pen-to-square"></i></a></li>
+            {% if user.is_authenticated %}
+
+            <li><a href="{% url 'profile' %}"><i class="fa-solid fa-id-card"></i></a></li>
+
+            {% else %}
+
+            <li><a href="{% url 'login' %}"><i class="fa-solid fa-right-to-bracket"></i></a></li>
+
+            {% endif %}
+        </ul>
+    </header>
+
+    <section class="top-view">{% block top-view %} {% endblock %}</section>
+
+    <main>
+        <div class="container">{% block content %} {% endblock %}</div>
+        {% block side %} {% endblock %}
+    </main>
+
+    <footer>
+        <p>copyright &COPY; Web道場 2022~</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js" integrity="sha512-gU7kztaQEl7SHJyraPfZLQCNnrKdaQi5ndOyt4L4UPL/FHDd/uB9Je6KDARIqwnNNE27hnqoWLBq+Kpe4iHfeQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://kit.fontawesome.com/66dc721d00.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+
+{% block top-view %}
+<div class="art-aboutBox">
+    <div class="art-aboutItem">
+        <div class="art-titleBox">
+            <p class="c-tag">{{post.category}}</p>
+            <div class="art-timeBox">
+                <p class="art-time">{{post.upgrade_date}}</p>
+                <p class="art-auth">{{post.auther}}</p>
+            </div>
+        </div>
+        <h2 class="art-title">{{post.title}}</h2>
+        <div class="art-intro">{{post.intro}}</div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<article>
+
+    {{post.markdown_to_html|safe}}
+</article>
+
+{% endblock %}
+
+{% block side %}
+<div class="sidebar">{% include 'blog/side.html' %}</div>
+{% endblock %}

@@ -1,0 +1,85 @@
+@media screen and (max-width:768px) {
+    .home-header {
+        position: fixed;
+        display: flex;
+        top: 0;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+        height: 70px;
+        width: 100vw;
+        z-index: 999;
+    }
+
+    .home-header h1 a {
+        font-size: 1.5rem;
+    }
+
+    .header-nav {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 0;
+        left: 0;
+        height: 70px;
+        width: 100vw;
+        gap: 1rem;
+        margin: 0 auto;
+        /* background: #14C38E; */
+        background: var(--pri-red);
+    }
+
+    body {
+        margin-bottom: 70px;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container {
+        min-height: calc(100vh - 2rem - 100px);
+        width: calc(100vw - 2rem);
+        margin: 1rem;
+        background: white;
+    }
+
+    .top-view {
+        position: relative;
+        margin-top: 70px;
+    }
+
+    .top-view>img {
+        height: 30vh;
+    }
+
+
+    /* article rule */
+    article :where(p, ul, ol, pre) {
+        font-size: .8rem;
+        padding: .5rem;
+    } article h1 {
+        font-size: 1.5rem;
+        padding: .5rem;
+    } article h2 {
+        font-size: 1.3rem;
+        padding: .5rem;
+    }
+
+    /* article about area */
+    
+
+    .art-aboutBox {
+        padding: 1rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .art-aboutItem {
+        height: 100%;
+        width: 100%;
+    }
+}

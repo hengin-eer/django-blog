@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web-doujou</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/responsive.css' %}">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/gradient-dark.min.css"
+        integrity="sha512-9BPoD3EiW9STszfvG0c4C9aKPKVeS/b2JD6LTSGJ0MRB6SEn2GDn2mEPdj8QZBDHOStOpKRyUzkC8q31cyqy7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="login">
+    <header class="login-header">
+        <h2 class="login-logo">Web道場</h2>
+    </header>
+
+    <div class="loginBox">
+        <!-- <i class="fa-solid fa-circle-user loginTitle"></i> -->
+        <i class="fa-regular fa-circle-user loginTitle"></i>
+        <!-- <i class="fa-solid fa-poo loginTitle"></i> -->
+        <form class="forms" action="" method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+            <p>{{ field }}</p>
+            {% endfor %}
+
+            {% for error in form.non_field_errors %}
+            <p class="loginErr" role="alert">{{ error }}</p>
+            {% endfor %}
+
+            <button type="submit" class="">submit</button>
+        </form>
+    </div>
+
+
+    <script src="https://kit.fontawesome.com/66dc721d00.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
